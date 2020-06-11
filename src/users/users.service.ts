@@ -1,4 +1,3 @@
-
 import { Injectable } from '@nestjs/common';
 
 export type User = any;
@@ -11,7 +10,7 @@ export class UsersService {
     this.users = [
       {
         userId: 1,
-        username: 'john',
+        username: 'al@soup.one',
         password: 'changeme',
       },
       {
