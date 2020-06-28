@@ -53,7 +53,7 @@ Slide one
 
 # Auth in Nest.js
 
-- Passports
+- Passports.js
 - Nest.js Auth Intro
 - JWT
   ...
@@ -74,3 +74,4 @@ Slide one
 - Mehr Coden / Anbindung an ein eigenes Projekt oder am besten gleich für smallstack
 - Für ein Thema dieser Grösse, kombiniert mit meinem Vorwissen hatte ich zu wenig Zeit
 - Ich würde gerne etwas davon im unser Produkt einbauen, um das Wissen zu festigen / zu vertiefen
+- Quarterly Auth Task 2.0
