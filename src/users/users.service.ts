@@ -7,6 +7,8 @@ export class UsersService {
   private readonly users: User[];
 
   constructor() {
+    // Mocking a persistacnce layer (access from DB, etc.)
+    // TODO: Use a one-way hash via bcrypt
     this.users = [
       {
         userId: 1,
