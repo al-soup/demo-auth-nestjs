@@ -15,6 +15,12 @@ export class AppController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @Get('auth/isloggedin')
+  isLoggedIn(@Request() req) {
+    return { isloggedin: true };
+  }
+
+  @UseGuards(JwtAuthGuard)
   @Get('profile')
   getProfile(@Request() req) {
     // user prop is added by passports
