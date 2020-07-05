@@ -2,78 +2,109 @@
 marp: true
 ---
 
-<!-- TODO: Apply theme -->
+<!--
+theme: gaia
+class: lead
+ -->
 
 # Q2 Quarter Task
 
-[Marp Documentation](https://marpit.marp.app/markdown)
+## Authentifizierung
 
-Slide one
+![bg right](./img/clipart-castle.png)
 
-<!-- TODO: Auth Build -->
+<!-- [Marp Documentation](https://marpit.marp.app/markdown) -->
 
 ---
 
 # Outline
 
-- My Goal
-- CS253
-- Auth in Nest.js
-- Auth in Angular
-- OAuth 2.0
-  - Google OAuth
-  - Auth0
+- Ziel
+- Vorgehen
+- _CS253_
+- Auth in _Nest.js_ & _Angular_
+- Identity Providers
+  - _Twitter OAuth_
+- Auth as a Service
+  - _Auth0_
 - Fazit
 
----
-
-# My Goal
-
-- Gewählt aus persönlichem Interesse und einem Gefühl zu wenig über ein solch wichtiges Thema zu wissen
-- Ziele die von mir und Max definiert wurden
-- Disclaimer: Auch wenn es eine Präsentation usw. hat möchte ich eure Erwartungen nicht enttäuschen. Es war der erste Quater Task und ich war ein bisschen im Blindflug unterweges.
-  - Obwohl wie klare Themen definiert haben, habe ich schnell gemerkt, dass mir einiges an Grundlagen fehlt.
-  - Während des ganzen Task bin ich oft zwischen Ideean und Konzepten hin und her gewechselt
-    TODO: Braucht mehr Ausführungen hier
-- Mein Zeitaufwand
+![bg right](./img/clipart-castle.png)
 
 ---
 
-# CS253
+# Ziel
 
-- Habe schnell gemerkt, dass mir viele Grundlagen fehlen. Obwohl dies nicht zum eigentlichen Ziel gehört, denke ich schon, das es sich gelohnt hat, sich ein bisschen in die Grundlagen zu vertiefen. Das Thema ist so breit, ich habe auch an diesen Themen nur an der Oberfläche gekratzt.
-- Inhalt
-  - Wie genau funktioniert ein Browser
-  - Session attacks
-  - Cookies,
-  - CSRF
-  - CORS
-  - Auth Mechanik
-- Ich musst dann aufhören, um mich doch noch mehr auf das eigentliche Ziel zu konzentrieren
+- Meine Motivation für die Themenwahl
+- Ziel gemäss Max und mir: **Zwei Authentifizierungen anschauen**
+- 2h/w plus eigener Aufwand
 
 ---
 
-# Auth in Nest.js
+# Vorgehen
 
-- Passports.js
-- Nest.js Auth Intro
-- JWT
-  ...
-- Probleme mit Setup, etc.
+- Anfangs unterwegs im Blindflug
+- Kurs _Web-Security CS253_
+- _Nest.js_ Auth Tutorial
+- Ausbau und Integration eines _Angular_ Frontends
+- Integration von _OAuth_
 
 ---
 
-# Auth in Angular
+# Web-Security CS253
 
-- Erstmalige Auseinandersetzung mit Guards
-- Diverse Tutorials für Best Practices
-- Refresh Tokens
+- Offener [Kurs der Uni Stanford](https://web.stanford.edu/class/cs253/)
+- Inhalt: _Browser Architektur, HTTP/S, Session attacks, Cookies, Same Origin Policy, CSRF, CORS, Best practice, **Auth?**, ..._
+- Wertvoller Kurs, aber zu wenig Fokus auf mein eigenes Ziel
+
+---
+
+# Bastelzeit
+
+### Auth in Nest.js
+
+- [Auth Tutorial](https://docs.nestjs.com/techniques/authentication) von _Nest.js_
+- LocalStrategy & JwtStrategy von _Passports.js_
+
+### Auth in Angular
+
+- Auseinandersetzung mit Guards, canActivate, Best Practices
+- Aufwendig und etwas mühsam
+- Viel Verbesserungspotential
+
+---
+
+# Demo
+
+<!-- _color: white -->
+
+![bg contain](./img/showme.gif)
+
+---
+
+# Twitter OAuth
+
+- Inegration via [OAuth 1.0a](https://developer.twitter.com/en/docs/basics/authentication/oauth-1-0a)
+- Soweit keine Verbindung zum Frontent
+- Konnte einfach verwendet werden, aber braucht noch Weiterentwicklung
+- Evt. Verwendung als Social Login von Auth0
+
+---
+
+# Auth0
+
+- Authentication as a [service](https://auth0.com/)
+- [Grossartiges Tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-getting-started/)
+- Integration via "JwtZStrategy" & [Auth0 SPA mock](https://dashboard.whatabyte.now.sh)
+- Soweit sehr empfehlenswerter Service aber mit 1-2 Unbekannten (z.B. [Preis](https://auth0.com/pricing/), [Verwendung mit Angular](https://auth0.com/docs/quickstart/spa/angular2?framed=1&sq=1#add-the-authentication-service))
 
 ---
 
 # Fazit
 
-- Mehr Coden / Anbindung an ein eigenes Projekt oder am besten gleich für smallstack
-- Für ein Thema dieser Grösse, kombiniert mit meinem Vorwissen hatte ich zu wenig Zeit
-- Ich würde gerne etwas davon im unser Produkt einbauen, um das Wissen zu festigen / zu vertiefen
-- Quarterly Auth Task 2.0
+- Früher mit Coden beginnen
+- Breites Thema benötigt mehr Zeitaufwand
+- Ich bin kein Experte, aber ich weiß worum es geht
+- Wissen gerne weiter vertiefen
+  - Implementierung in Backoffice
+  - QX Quarter Task: **Auth 2.0**

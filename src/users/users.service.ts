@@ -7,23 +7,13 @@ export class UsersService {
   private readonly users: User[];
 
   constructor() {
-    // Mocking a persistacnce layer (access from DB, etc.)
-    // TODO: Use a one-way hash via bcrypt
+    // Mocking a persistance layer (access from DB, etc.)
     this.users = [
       {
         userId: 1,
         username: 'al@soup.one',
-        password: 'changeme',
-      },
-      {
-        userId: 2,
-        username: 'chris',
-        password: 'secret',
-      },
-      {
-        userId: 3,
-        username: 'maria',
-        password: 'guess',
+        passwordHash:
+          '$2b$10$EGKtbzi252jOeEn93klpi.79b1UO8NZrrJi5fKi0QM4n.6yvLrZ/O',
       },
     ];
   }
