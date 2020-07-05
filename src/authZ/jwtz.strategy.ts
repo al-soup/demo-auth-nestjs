@@ -12,13 +12,10 @@ export class JwtZStrategy extends PassportStrategy(Strategy, 'jwtz') {
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        // jwksUri: `${authzOptions.authzDomain}.well-known/jwks.json`,
         jwksUri: `${process.env.AUTHZ_DOMAIN}.well-known/jwks.json`,
       }),
 
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      // audience: authzOptions.authzAudience,
-      // issuer: `${authzOptions.authzDomain}`,
       audience: process.env.AUTHZ_AUDIENCE,
       issuer: `${process.env.AUTHZ_DOMAIN}`,
       algorithms: ['RS256'],

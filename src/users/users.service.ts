@@ -13,7 +13,7 @@ export class UsersService {
         userId: 1,
         username: 'al@soup.one',
         passwordHash:
-          '$2b$10$EGKtbzi252jOeEn93klpi.79b1UO8NZrrJi5fKi0QM4n.6yvLrZ/O',
+          '$2b$10$EGKtbzi252jOeEn93klpi.79b1UO8NZrrJi5fKi0QM4n.6yvLrZ/O', // dummy pw ;)
       },
     ];
   }

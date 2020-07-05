@@ -29,7 +29,7 @@ export class AuthService {
       });
     }
     if (passwordMatch) {
-      // Return every user property but the the hash
+      // Return every user property but the hash
       const { passwordHash, ...result } = user;
       return result;
     }
